@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Click All View Answer",
+  "version": "1.0",
+  "description": "Clicks all instances of the 'View Answer' button on Sanfoundry.",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
